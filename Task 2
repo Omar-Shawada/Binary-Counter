@@ -1,0 +1,14 @@
+byte pin[5]={6,5,4,3,2};
+void setup() {
+  for(byte z=2;z<=6;z++)
+  pinMode(z,OUTPUT);
+
+}
+
+void loop() {
+  for(byte x=0;x<32;x++){
+    for(byte i=0;i<=5;i++){
+      digitalWrite(pin[i],x&1<<i);
+    }
+    delay(1000);}
+}
